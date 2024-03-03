@@ -1,0 +1,27 @@
+body{
+    background-color: rgba(190, 208, 218, 0.723);
+    justify-content: center;
+    align-items: center;
+}
+.email-input {
+        width:  300px;
+        padding: 14px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+ h1 {
+            font-size: 40px;
+            font-weight: normal
+        }
+.email-button {
+            display: inline-block;
+            padding: 12px 17px;
+            margin: 10px;
+            background-color: #0f0be6;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius:5px;
+            text-align: center;
+        }

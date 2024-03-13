@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Bai1.js"></script>
+</head>
+<body>
+    <style>
+  
+  #container {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#form {
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+label {
+  width: 80px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+input[type=number] {
+  flex: 1;
+}
+
+button {
+  margin-top: 10px;
+}
+    </style>
+   <div id="container">
+    <h3 style="color:rgb(101, 225, 87)">GIẢI PHƯƠNG TRÌNH BẬC I</h3>
+    <div id="form">
+      <div class="row">
+        <label for="a">Hệ số a:</label>
+        <input type="number" id="a" name="a" required placeholder="Hệ số a">
+      </div>
+      <div class="row">
+        <label for="b">Hệ số b:</label>
+        <input type="number" id="b" name="b" required placeholder="Hệ số b">
+      </div>
+      <button onclick="solveQuation()">Giải Phương Trinh</button>
+    </div>
+    <div id="result"></div>
+  </div>
+</body>
+</html>

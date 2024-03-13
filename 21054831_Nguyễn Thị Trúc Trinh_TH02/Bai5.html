@@ -1,182 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-    <meta name = "viewport" content="width=device-width, initial-scale=1">
-    <title>Bài 5 </title>
-	
-</head>
-<style>
-    *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs...in.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap...in.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
 
-section{
-    background: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+        .login-container {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height: auto;
+            display: flex;
+            justify-content: space-between; 
+        }
+
+        .login-form {
+            width: 100%; 
+        }
+
+        .login-button {
+            width: 100%; 
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            color: #fff;
+            width: 180px;
+            
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button[type="submit"] {
+            width: 30px;
+            height: 100px;
+            padding: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #ea4253;
+        }
+        .button-with-icon {
+    position: relative;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    position: relative;
-}
-
-section .login{
-    z-index: 1;
-    width: 450px;
-    background: #221f1f;
-    padding: 30px 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-}
-
-
-
-.login h2{
-    font-size: 25px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.login p{
-    font-size: 15px;
-    font-weight: lighter;
-}
-
-.login .gap{
-    margin-top: 10px;
-}
-
-
-
-.login .column {
-    z-index: 1;
-    width: 60%;
-    background: #221f1f;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-}   
-
-.column .box{
-    height: 40px;
-    background: #1f1c1c;
-   width: 100%;
-   display: flex;
-   align-items: flex-start;
-   gap: 5px;
-}
-
-.column .box >div{
-    background: #504a4a;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    gap: 5px;
-    border-radius: 8px;
- }
-
- 
-
- .column .box>div input{
-    background: #504a4a;
-    margin-left: 10px;
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline:  none;
-    font-size: 14px;
-    color: #ffffff;
-    border-radius: 8px;
-}
- 
-
-.column .box>div >div{
-    background: #504a4a;
-    margin-left: 4px;
-    width: 10%;
-    height: 10%;
-    border: none;
-    outline:  none;
-    font-size: 16px;
-    border-radius: 8px;
-    margin-top: 15px;
-    margin-right: 10px;
-}
-.column .box>div >div >div >svg{
- transform: rotate(120deg);
-}
-
-.login button{
-
-    background: #fa0404;
-   
-    width: 12%;
-    display: flex;
-    align-items: center;
-    border: none;
-    padding: 13px;
-    font-size: 16px;
-    color: #6e6e6e;
-    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
     cursor: pointer;
-    margin-left: 7px;
-    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 10px;
 }
-</style>
-<body>
 
-    <section>
-        <div class="login">
-            <div class="gap"></div>
-            <div class="column">
-                <div class="box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="32" fill="#ffffff" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
-                        <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-                      </svg>
-                    <h2>Login</h2>
+.button-with-icon i {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.input-key {
+  position: relative;
+  width: 100%;
+}
+
+.input-key input {
+  padding-right: 30px;
+}
+
+.input-key i {
+  position: absolute;
+  top: -4px;
+  right: 96px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Username">
                 </div>
-                <div class="box"> 
-                    <div>                                              
-                        <input type="text" placeholder="UserName" id="username" >
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-person-fill" viewBox="0 0 16 16">
-                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                              </svg>
-                        </div> 
-                    </div>
-                </div>
-                <div class="box">
-                    <div>
-                        <input type="password" placeholder="Password" id="password">
-                        <div><div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-key-fill" viewBox="0 0 16 16">
-                                <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-                              </svg>
-                        </div>
-                            </div> 
-                    </div>
-                </div>
-            </div>
-            
-            <button>
-                <div>
-                    
-                </div><br>
-                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="#ffffff" class="bi bi-bag-fill" viewBox="0 0 16 16">
-                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
-                  </svg>
-            </button>     
+<div class="input-group" >
+                    <label for="password"></label>
+                <input class="input-key" type="password" id="password" name="password" placeholder="Password">
+                <i class="bi bi-key-fill"></i>
+</div>
+            </form>
         </div>
-    </section>
+        <div class="login-button">
+            <br>
+            <br>
+            <br>
+            <button class="button-with-icon" type="submit" form="loginForm"><i class="fas fa-lock fa-lg"></i></button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const username = document.querySelector('#username').value;
+    const password = document.querySelector('#password').value;
+
+   
+    if (username === 'tructrinhhi' && password === '05082003') {
+        confirm('Bạn muốn hiện mật khẩu')
+        window.location.href = 'bai5.html';
+    } else {
+        
+       
+    }
+});
+    </script>
 </body>
 </html>

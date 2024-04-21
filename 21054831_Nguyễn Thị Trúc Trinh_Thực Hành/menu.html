@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout with Dropdown Menu</title>
+    <link rel="stylesheet" href="la.css">
+</head>
+<style>.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+}
+
+/* Header styling */
+.banner {
+    background-color: white;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation with dropdown */
+nav ul {
+    list-style: none;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    position: relative; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    top: 100%; 
+    left: 0; 
+}
+
+.dropdown li {
+    width: 150px; 
+}
+
+.dropdown li a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.dropdown li a:hover {
+    background-color: #444; 
+}
+
+
+nav ul li:hover .dropdown {
+    display: block; 
+}
+
+
+aside {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+section {
+    flex: 2;
+    padding: 20px;
+}
+
+article {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav ul {
+        display: none; 
+        flex-direction: column; 
+    }
+
+    nav ul.open {
+        display: block; 
+    }
+
+  
+    .dropdown {
+        position: relative; 
+        top: auto;
+        left: auto;
+    }
+
+    aside {
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
+article {
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    margin-bottom: 20px; 
+    padding: 20px; 
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+</style>
+<body>
+   
+    <header>
+        <div class="banner">
+         
+          <img src="https://tuyensinh.iuh.edu.vn/templates/2015/image/bannerIUH_small.png" alt="Banner đại học">
+        </div>
+      </header>
+
+   
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Đào tạo</a>
+                <ul class="dropdown">
+                    <li><a href="#">Đồ họa</a></li>
+                    <li><a href="#">Web</a></li>
+                    <li><a href="#">Mạng</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Dịch vụ</a>
+           
+            <li><a href="#">Liên hệ</a>
+            </li>
+        </ul>
+    </nav>
+
+    
+    <main>
+        <div class="container">
+            
+            <aside>
+                <h2>Thông báo đăng ký học phần và đóng học phí học kỳ III năm học 2023 - 2024</h2>
+                <p>Thời gian đăng ký từ ngày 02/05/2024 đến ngày 19/05/2024</p>
+            </aside>
+
+           
+            <section>
+                <article>
+                    <h2>Nghỉ lễ Giỗ tổ Hùng Vương (10/3 âm lịch), Ngày Giải phóng miền Nam (30/4) và Ngày Quốc tế lao động (01/05) năm 2024</h2>
+                    <p>Viên chức, người lao động, sinh viên được nghỉ từ thứ Hai, ngày 29 tháng 4 năm 2024 đến hết thứ Tư, ngày 01 tháng 5 năm 2024</p>
+                </article>
+                <article>
+                    <h2>Thông báo v/v nghỉ học trong thời gian tổ chức kỳ thi Đánh giá năng lực ĐHQG-HCM đợt 1 năm 2024 tại Cụm thi Trường Đại học Công nghiệp Thành phố Hồ Chí Minh</h2>
+                    <p>Đây là nội dung của bài báo mới nhất.</p>
+                </article>
+                <article>
+                    <h2>Thông báo v/v tuyển chọn sinh viên đi thực tập có hưởng lương tại Nhật Bản</h2>
+                    <p>Đối tượng: sinh viên năm thứ 3, 4 tất cả các ngành<br> Số lượng: 300 sinh viên(năm 2024)</p>
+                </article>
+            </section>
+        </div>
+    </main>
+
+   
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Liên hệ</h3>
+                <p>Số điện thoại: 0123 456 789</p>
+                <p>Email: info@example.com</p>
+                <p>Địa chỉ: 12 Nguyễn Văn Bảo, Gò Vấp, TP. Hồ Chí Minh</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hoạt động khác</h3>
+                <ul>
+                    <li><a href="#">Sự kiện</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Thông tin mở rộng</h3>
+                <ul>
+                    <li><a href="#">Sự kiện</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Trường Đại Học Công Nghiệp TP Hồ Chí Minh. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $("#flip").click(function(){
+    $("#panel").toggle("slow");
+    });
+    });
+    </script>
+
+</body>
+</html>
